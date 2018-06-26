@@ -1,0 +1,102 @@
+@chrset "utf-8";
+/*Noto Sans KR*/
+/*@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 100; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype'); } 
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype'); } 
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype'); } 
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype'); } 
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype'); } 
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 900; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype'); } 
+*/
+
+
+/*reset*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label,legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}ol, ul {list-style: none;}table {border-collapse: collapse;border-spacing: 0;}
+/*common*/
+a,img{display: block;text-decoration: none;color: inherit;}
+input, textarea, button, select{border: 0 none;padding: 0;background:transparent;}
+.ir{display: block;text-indent: -9999px;}
+.clearfix:after{display: block;content: "";clear: both}
+.fll{float: left;}
+.flr{float: right;}
+.wrap.main .inner{width: 1200px;margin: 0 auto;}
+.inner:after{content: ""; display: block; clear: both;}
+.etc_bx.on {display: block;}
+/*module 또는 사용자정의*/
+/*layout*/
+.wrap{}
+#header{position: relative; z-index: 30;}
+#container{position: relative; z-index: 20;height: 500px;}
+#footer{position: relative; z-index: 10;}
+
+/*header*/
+#header .inner{position: relative;min-height: 108px;background-color: #fff;}
+#header .title{float: left;position: relative;z-index: 30;}
+/*타이틀*/
+#header .title .ir{margin:39px 60px 0 0;width: 218px;height: 31px;background-image: url(../imgs/logo_hd.png);}
+/*메인 네비게이션*/
+.gnb{float: left;}
+
+.gnb .m_menu{float: left;position: relative;text-align: center;}
+.gnb .m_menu>a{position: relative;padding: 44px 40px 44px 40px;font-family: 'Roboto', sans-serif;font-size: 14px;font-weight: 700;z-index: 30;background-color: #fff;}
+.gnb .sub_menu{position: absolute;top: -100%;z-index: 22;padding-bottom: 50px;width: 100px;opacity:0;}
+.gnb .sub_menu a{padding: 6px 0;text-align:center;font-size: 12px;font-family: 'Noto Sans KR', sans-serif;color: #a0a0a0;}
+.gnb .sub_menu a:hover {text-decoration: underline;color: #ae1d31;}
+
+
+
+.etc_menu{position: absolute;top: 44px;right: 0;z-index: 30;}
+.etc_menu>div{float: left;}
+.etc_menu a,span{background-repeat: no-repeat;}
+.etc_menu .search{position: relative;z-index: 30;}
+.etc_menu .search a{padding-bottom: 50px;width: 16px;height: 16px;background-image: url(../imgs/search.png);}
+.search_bx{display: none;position: absolute;top: 30px;left:0;width: 238px;border: 1px solid #e5e5e5; z-index: 30;background-color: #fff;}
+.search_bx fieldset{padding: 29px 18px;}
+.search_bx fieldset legend{overflow:hidden;visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.search_bx fieldset .search_text{float: left;padding-left: 10px;width: 150px;height: 30px;border: 1px solid #e5e5e5;font-size: 12px;}
+.search_bx fieldset .search_btn{float: left;width: 39px;height: 32px;background: #c6c6c6 url(../imgs/serch_store.png) 50% 50% no-repeat;}
+.etc_menu .membership{position: relative;z-index: 30;margin: 0 28px;}
+.etc_menu .membership>a{padding-bottom: 50px;width: 15px;height: 13px;background-image: url(../imgs/membership.png);}
+.membership_bx{display: none;position: absolute;top: 30px;left: 0;z-index: 30;padding: 28px 18px;border: 1px solid #e5e5e5;background-color: #fff;font-family: 'Roboto', sans-serif;text-align: center;}
+.membership_bx a{width: 200px;padding: 10px 0;border: 1px solid #e5e5e5;font-size: 12px;cursor: pointer;}
+.membership_bx a:hover{background-color: #ddd;color: #fff;}
+.membership_bx .join_wrap{margin-top: 6px;}
+.etc_menu .app{position: relative;margin-top: -6px;}
+.etc_menu .app a{}
+.etc_menu .app a .app_l{width: 62px;height: 24px;border: 1px solid #ae1d31;}
+.etc_menu .app a .app_bg{position: absolute;top: 0;left: 0;width: 26px;height: 25px;background-color: #ae1d31;transition: 0.3s;background-image: url(../imgs/down.png);background-position: 7px 7px;}
+.etc_menu .app a .app_text{position: absolute;top: 5px;right: 8px;font-family: 'Roboto', sans-serif;font-weight: 700;font-size: 12px;color: #ae1d31;}
+.menu_bg{position: absolute;top: -110px;left: 0;right: 0;z-index: 21;height: 218px;border-bottom: 1px solid #e5e5e5;background-color: #fff;}
+
+/*footer*/
+#footer{}
+#footer .inner{}
+.ft_notice {}
+.ft_notice .title{}
+.ft_notice .title h2{}
+.ft_notice .title h2 a{}
+.ft_notice .list{}
+.ft_notice .notic_cnt{}
+.ft_notice .notic_cnt li{}
+.ft_notice .notic_cnt li span{}
+.ft_notice .control{}
+.ft_notice .more{}
+.ft_info {}
+.ft_info .title{}
+.ft_info .title h2{}
+.ft_info .title h2 a{}
+.twosome_info{}
+.twosome_info .info_01{}
+.twosome_info .info_01 li{}
+.twosome_info .info_01 li a{}
+.twosome_info .info_02{}
+.twosome_info .info_02 li{}
+.twosome_info .info_02 li a{}
+.twosome_info .copyright{}
+.twosome_info .copyright span{}
+.twosome_info .sns{}

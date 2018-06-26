@@ -1,0 +1,23 @@
+// font
+$font_kr: 'Noto Sans KR', sans-serif;
+$font_en: 'Roboto', sans-serif;
+$font_samll: 12px;
+
+@mixin font_en_w($size, $property: null) {
+	font-family: $font_en;
+	font-size: $size;
+	font-weight: $property;
+}
+
+@mixin font_k_w($size, $property: null) {
+	font-family: $font_kr;
+	font-size: $size;
+	font-weight: $property;
+}
+
+
+%ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

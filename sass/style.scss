@@ -1,0 +1,546 @@
+@import 'reset';
+@import 'font';
+@import 'color';
+@import 'zindex';
+@import 'position';
+
+//지울것
+@mixin cnt_h($inja) {
+  #{$inja} {
+    height: 1200px;
+  }
+}
+@include cnt_h('#container');
+
+//before
+
+@mixin before_ab ($width: null, $height: null, $top:null, $left:null, $right:null) {
+  
+     content: '';
+   	 position: absolute;
+     display: block;
+     width: $width;
+     height: $height;
+     top: $top;
+     left: $left;
+     right: $right;
+
+}
+
+
+//ir
+
+%ir {
+
+	display: block;
+	text-indent: -9999px;
+}
+
+//border
+$border_gray: 1px solid #e5e5e5;
+@mixin border_normal($border_c){
+
+	border: 1px solid $border_c;
+}
+
+//legend setting
+
+%screen_out {
+	overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+
+//background img
+@mixin bgi($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+}
+
+//layout
+#header{
+	@include relative(); 
+	@include z-index(header_stuff);
+}
+#container{
+	@include relative(); 
+	@include z-index(container_stuff);
+}
+#footer{
+	@include relative();
+	@include z-index(footer_stuff);
+}
+
+//header
+#header .inner{
+	@include relative();
+	min-height: 108px;
+	background-color: $white;
+}
+//title
+#header {
+	.title {
+
+		float: left;
+		@include relative();
+		@include z-index(header_stuff);
+
+		 a { 
+		 	margin:39px 60px 0 0;
+		 	width: 218px;
+		 	height: 31px;
+		 	@include bgi('../imgs/logo_hd.png');
+			
+		}
+	}
+
+	h2 {
+		@extend %screen_out;
+	}
+}
+
+//main_nav
+.gnb{
+	float: left;
+
+}
+
+.m_menu {
+
+	float: left;
+	@include relative();
+	text-align: center;
+
+	>a {
+		@include relative();
+		padding: 44px 40px 44px 40px;
+		@include z-index(header_stuff);
+		@include font_en_w(14px,700);
+		background-color: $white;
+	}
+
+	.sub_menu {
+		@include absolute($top: -100%);
+		@include z-index(sub_menu);
+		padding-bottom: 50px;
+		width: 100px;
+		opacity:0;
+		
+		a {
+			padding: 6px 0;
+			text-align:center;
+			@include font_k_w(12px,300);
+			color: $sub_a;
+
+			&:hover {text-decoration: underline;color: $brand_color;}
+		}
+	}
+}
+
+
+.etc_menu{
+	@include absolute($top: 44px, $right: 0);
+	@include z-index(header_stuff);
+
+	>div {
+		float: left;
+	}
+
+	.search{
+		@include relative();
+		@include z-index(header_stuff);
+
+		a {
+			padding-bottom: 50px;
+			width: 16px;
+			height: 16px;
+			@include bgi('../imgs/search.png');
+		}
+	}
+
+	.membership{
+		@include relative();
+		@include z-index(header_stuff);
+		margin: 0 28px;
+
+		>a {
+			padding-bottom: 50px;
+			width: 15px;
+			height: 13px;
+			@include bgi('../imgs/membership.png');
+		}
+	}
+
+	.app {
+		@include relative();
+		margin-top: -6px;
+		
+		.app_l {
+			width: 62px;
+			height: 24px;
+			@include border_normal($brand_color)
+
+		}
+		
+		.app_bg {
+			@include absolute($top: 0, $left: 0);
+			width: 26px;
+			height: 25px;
+			background-color: #ae1d31;
+			transition: 0.3s;
+			@include bgi('../imgs/down.png');
+			background-position: 7px 7px;
+		}
+
+		.app_text {
+			@include absolute($top: 4px,$right: 8px);
+			@include font_en_w(12px,700);
+			color: $brand_color;
+		}
+	}
+
+} //etc_menu one_depth end
+
+
+.search_bx{
+	display: none;
+	@include absolute($top: 30px,$left:0);
+	width: 238px;
+	border: $border_gray;
+	@include z-index(header_stuff);
+	background-color: $white;
+
+	fieldset {
+
+		padding: 29px 18px;
+
+		legend {
+			@extend %screen_out;
+		}
+
+		.search_text {
+			float: left;
+			padding-left: 10px;
+			width: 150px;
+			height: 30px;
+			border: $border_gray;
+			@include font_k_w(12px, normal)
+		}
+		.search_btn {
+			float: left;
+			width: 39px;
+			height: 32px;
+			@include bgi('../imgs/serch_store.png');
+			background-position: 50% 50%;
+			background-color: $semi_gray;
+		}
+	}
+}
+
+.membership_bx{
+	display: none;
+	@include absolute ($top: 30px, $left: 0);
+	@include z-index(header_stuff);
+	padding: 28px 18px;
+	border: $border_gray;
+	background-color: #fff;
+	@include font_en_w(12px,normal);
+	text-align: center;
+
+	a {
+		width: 200px;
+		padding: 10px 0;
+		border: $border_gray;
+
+		&:hover {
+
+			background-color: $semi_gray;
+			color: $white;
+
+		}
+		
+	}
+
+	.join_wrap {
+		margin-top: 6px;
+	}
+}
+
+// etc_menu_end
+
+
+.menu_bg {
+	@include absolute($top: -110px, $right: 0, $left: 0);
+	@include z-index(menu_bg);
+	height: 218px;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: $white;
+}
+
+//header_end
+
+//container
+
+
+//footer
+
+#footer {
+	
+	background-color: $footer_gray;
+	color: $footer_font;
+
+	.ft_top {
+			
+		border-bottom: 1px solid #464646;
+
+	}
+
+	.inner {
+
+
+	}
+}
+
+
+.notice_title, .list, .more {
+
+	float: left;
+}
+
+.list, .more {
+	padding: 30px 0;
+}
+
+.ft_notice {
+	
+	@include relative();
+
+
+	.notice_title {
+		
+		h4 {
+
+			.title_icon {
+				margin-top: 26px;
+				float: left;
+				width: 30px;
+				height: 30px;
+				@include bgi('../imgs/notice.png');
+
+			}
+
+			.title_h2 {
+				@include relative();
+				float: left;
+				margin: 34px 0 0 18px;
+				padding-right: 18px;
+				border-right: 1px solid $semi_gray;
+				@include font_k_w(16px,bold);
+				color: $white;
+				line-height: 0.95;	
+
+			} 
+		}
+
+	}
+
+	.list {
+
+
+		.notic_cnt {
+
+
+			
+			li {
+				
+				margin-left: 30px;
+
+				.notice_text {
+					display: inline-block;
+					width: 500px;
+					@include font_k_w(16px,normal);
+					@extend %ellipsis;
+
+				}
+
+				.date {
+
+					display: inline-block;
+					margin-left: 20px;
+					@include font_k_w(16px,normal);
+					@extend %ellipsis;
+
+				}
+			}
+
+		}
+
+
+		.bx-pager {
+			display: none;
+		}
+
+		.bx-controls {
+			@include absolute ($top: 5px, $right: 142px);
+			
+		}
+
+		.bx-prev {
+
+			@extend %ir;
+			width: 11px;
+			height: 6px;
+			@include bgi('../imgs/n_arrow_up.png');
+			@include absolute ($top: 16px, $left: 0);
+		}
+
+		.bx-next {
+
+			@extend %ir;
+			width: 11px;
+			height: 6px;
+			@include bgi('../imgs/n_arrow_down.png');
+			@include absolute ($top: 50px, $left: 0);
+		}
+		
+		.bx-start {
+
+			@extend %ir;
+			width: 7px;
+			height: 8px;
+			@include absolute ($top: 32px, $left: 2px);
+		}
+		.bx-stop {
+			@extend %ir;
+			width: 7px;
+			height: 8px;
+			@include bgi('../imgs/n_pause.png');
+			@include absolute ($top: 32px, $left: 2px);
+		}
+
+	}
+
+	.more {
+
+			float: right;
+			color: $white;
+
+		a {
+			@include font_k_w(14px,normal);
+			i {
+				display: inline-block;
+				width: 7px;
+				height: 8px;
+				@include bgi('../imgs/more.png');
+
+			}
+		}
+	}
+
+}
+
+.ft_info {
+
+	.title {
+
+		float: left;
+		margin: 32px 34px 0 0;
+
+		a {
+			
+			width: 210px;
+			height: 30px;
+			@include bgi('../imgs/logo_ft.png');
+			@extend %ir;
+
+		}
+
+	}
+
+	.twosome_info {
+		
+		float: left;
+		width: 600px;
+	}
+
+	.sns {
+		margin-top: 32px;
+		float: left;
+	}
+
+}
+
+.info_01, .info_02, .sns_ul {
+
+	li {
+
+		float: left;
+
+		a {
+			
+			@include font_k_w(12px,normal)
+
+		}
+	}
+}
+
+.info_01 {
+
+	padding-top: 32px;
+
+	
+	li {
+
+		margin-left: 9px;
+		line-height: 0.95;
+		border-right: 1px solid $semi_gray;
+
+		a {
+			
+			padding-right: 10px;
+
+		}
+
+	}
+	.first {
+
+		margin-left: 0;
+	}
+
+	.last {
+		border-right: 0;
+	}
+	
+	.highlight {
+
+		color: $white;
+	}
+
+}
+
+.info_02 {
+	
+	margin-top: 6px;
+	li {
+
+		margin: 0 3px 6px 0;
+		padding-right: 9px;
+
+		a {
+			
+
+		}
+	}
+
+}
+
+.copyright {
+	
+	margin-bottom: 30px;	
+	@include font_en_w(12px)
+	
+}

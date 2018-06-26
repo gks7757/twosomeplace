@@ -1,0 +1,15 @@
+$z-index: (
+  header_stuff		 : 30,
+  sub_menu 			 : 22,
+  menu_bg            : 21,
+  container_stuff    : 20,
+  footer_stuff       : 10,
+);
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
