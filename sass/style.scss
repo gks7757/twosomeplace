@@ -14,21 +14,6 @@
 }
 @include cnt_h('#container');
 
-//before
-
-@mixin before_ab ($width: null, $height: null, $top:null, $left:null, $right:null) {
-  
-     content: '';
-   	 position: absolute;
-     display: block;
-     width: $width;
-     height: $height;
-     top: $top;
-     left: $left;
-     right: $right;
-
-}
-
 
 //ir
 
@@ -45,7 +30,7 @@ $border_gray: 1px solid #e5e5e5;
 	border: 1px solid $border_c;
 }
 
-//legend setting
+//screen_out
 
 %screen_out {
 	overflow: hidden;
@@ -56,6 +41,10 @@ $border_gray: 1px solid #e5e5e5;
     text-indent: -9999px;
 }
 
+.screen_out {
+
+	@extend %screen_out
+}
 
 //background img
 @mixin bgi($url) {
@@ -287,6 +276,124 @@ $border_gray: 1px solid #e5e5e5;
 
 //container
 
+#container {
+
+		.section{
+			
+			margin-top: 36px;
+
+
+		}
+
+}
+
+
+.main_banner {
+	
+	margin-top: 50px;
+
+	.banner_wrap {
+	
+		width: 100%;
+
+		.area_wrap {
+
+			@include relative();
+			float: left;
+			width: 33.333333%;
+			// height: 490px;
+			// overflow: hidden;
+		}
+
+		p {
+
+			@include font_k_w(16px);
+		}
+
+
+	}
+
+
+}
+
+.main_banner {
+
+	.tumbnail {
+		
+		overflow: hidden;
+		height: 490px;
+
+	}
+
+
+	.desc {
+	
+		@include absolute ($top: 56px);
+		width: 100%;
+		text-align: center;
+		line-height: 0.95;
+
+		.sub {
+			
+
+		}
+
+		.desc_title {
+			
+			margin-top: 20px;
+			span{color: $brand_color;}
+			font-size: 28px;
+		}
+
+		p.desc_title {
+
+			@include font_k_w(26px,bold);
+			letter-spacing: -1px;
+
+		}
+
+	}
+
+
+}
+
+
+//박스슬라이더 컨트롤러 조정
+.main_banner {
+
+	.bx-controls {
+
+		@include absolute ($bottom: 56px, $right: 20px);
+		width: 50px;
+
+		.bx-controls-direction {
+			display: none;
+		}
+
+	}
+
+}
+
+.twosome_app {
+	
+
+
+	.app_store {
+		
+		width: 94px;
+		@include absolute ($top: 150px, $left: 50%, $right: 50%);
+		transform: translateX(-50%);
+
+		.apple {
+
+			margin-top: 8px;
+		}
+
+	}
+
+
+}
+
 
 //footer
 
@@ -354,12 +461,12 @@ $border_gray: 1px solid #e5e5e5;
 
 
 		.notic_cnt {
-
-
 			
 			li {
 				
 				margin-left: 30px;
+				
+				a span {color: #848484;}
 
 				.notice_text {
 					display: inline-block;
@@ -410,28 +517,34 @@ $border_gray: 1px solid #e5e5e5;
 		}
 		
 		.bx-start {
-
-			@extend %ir;
+			// display: none;
+			@include absolute ($top: 32px, $left: 2px);
 			width: 7px;
 			height: 8px;
-			@include absolute ($top: 32px, $left: 2px);
+			@extend %ir;
+			@include bgi('../imgs/n_pause.png');
 		}
 		.bx-stop {
-			@extend %ir;
+			// display: none;
+			@include absolute ($top: 32px, $left: 2px);
 			width: 7px;
 			height: 8px;
-			@include bgi('../imgs/n_pause.png');
-			@include absolute ($top: 32px, $left: 2px);
+			@extend %ir;
+			@include bgi('../imgs/n_play.png');
+
 		}
+
+		// .bx-start.active {display: block;}
+		// .bx-stop.active {display: block;}
 
 	}
 
 	.more {
 
 			float: right;
-			color: $white;
 
 		a {
+			color: $white;
 			@include font_k_w(14px,normal);
 			i {
 				display: inline-block;
@@ -471,7 +584,22 @@ $border_gray: 1px solid #e5e5e5;
 
 	.sns {
 		margin-top: 32px;
-		float: left;
+		float: right;
+
+		.facebook a {
+			width: 28px;
+			height: 28px;
+			@include bgi('../imgs/fb.png');
+			@extend %ir;
+		}
+
+		.insta a {
+			margin-left: 8px;
+			width: 28px;
+			height: 28px;
+			@include bgi('../imgs/insta.png');
+			@extend %ir;
+		}
 	}
 
 }
@@ -479,14 +607,10 @@ $border_gray: 1px solid #e5e5e5;
 .info_01, .info_02, .sns_ul {
 
 	li {
-
+	
 		float: left;
-
-		a {
-			
-			@include font_k_w(12px,normal)
-
-		}
+		@include font_k_w(12px,normal);
+		
 	}
 }
 
@@ -504,6 +628,11 @@ $border_gray: 1px solid #e5e5e5;
 		a {
 			
 			padding-right: 10px;
+			color: #848484;
+			&:hover{
+				text-decoration: underline;
+			}
+			
 
 		}
 
@@ -517,7 +646,7 @@ $border_gray: 1px solid #e5e5e5;
 		border-right: 0;
 	}
 	
-	.highlight {
+	.highlight a {
 
 		color: $white;
 	}
@@ -542,7 +671,7 @@ $border_gray: 1px solid #e5e5e5;
 
 .copyright {
 	
-	margin-bottom: 30px;	
+	margin-bottom: 30px;
 	@include font_en_w(12px)
 	
 }
