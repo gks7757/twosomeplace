@@ -23,8 +23,9 @@ a {
 }
 input, textarea, button, select{
 	border: 0 none;padding: 0;background:transparent;
-	cursor: pointer;
 }
+
+button, select {cursor: pointer;}
 /*common*/
 .ir{
 	display: block;text-indent: -9999px;

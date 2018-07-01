@@ -142,6 +142,7 @@ jQuery(function($){
 
     //container
 
+
     //main_banner_event
 
     $('.event_cnt_wrap').bxSlider({
@@ -150,8 +151,66 @@ jQuery(function($){
         speed: 700,
         autoControls: true,
         stopAutoOnClick: true,
-        pager: true
+        pager: true,
+        autoControlsCombine: true
     });
+
+
+    //slick_new arrival
+
+    $('.new_wrap').slick({
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        dotsClass: 'number-slide-dots'
+    });
+
+
+    //slick_best_item
+
+    $('.tab_contents').slick({
+        arrows: true,
+        dots: false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        appendArrows:$('.best_item .slide_arrow')
+    });
+
+    $('.control').on( 'click','.best_ctr li a',control_move);
+
+    function control_move(e) {
+        e.preventDefault();
+
+        var $this = $(this);
+        var $tab_li = $(this).parent();
+        var $all_tab_li = $('.control .best_ctr li');
+        var tab_idx = $this.parent().index();
+
+        $all_tab_li.removeClass('on');
+        $tab_li.addClass('on');
+
+        console.log(tab_idx);
+        $('.tab_contents').slick('slickGoTo',tab_idx);
+    };
+
+
+    $('.slide_arrow').on( 'click','.slick-arrow', control_arrow );
+
+    function control_arrow(e) {
+        var tab_contents_idx = $('.tab_contents').slick('slickCurrentSlide');
+        var $all_tab_li = $('.control .best_ctr li');
+
+        console.log(tab_contents_idx);
+
+        $('.control .best_ctr li').removeClass('on');
+        $all_tab_li.eq(tab_contents_idx).addClass('on');
+    };
 
     //footer notice
 
@@ -161,16 +220,9 @@ jQuery(function($){
       speed: 700,
       autoControls: true,
       stopAutoOnClick: true,
-      pager: true
+      pager: true,
+      autoControlsCombine: true
     });
 
-    // $('.bx-start').on('click', function() {
-    //    $(this).removeClass('active');
-    //    $('.bx-stop').addClass('active');
-    // });
-    // $('.bx-stop').on('click', function() {
-    //    $(this).removeClass('active');
-    //    $('.bx-start').addClass('active');
-    // });
 
 });

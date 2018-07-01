@@ -9,6 +9,9 @@
     <script type="text/javascript" src="assets/jquery.min.js"></script>
     <script type="text/javascript" src="assets/jquery.color.min.js"></script>
     <script type="text/javascript" src="assets/bx/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto" rel="stylesheet">
     <script type="text/javascript" src="js/init.js"></script>
 </head>
@@ -18,8 +21,8 @@
         <div id="header">
             <div class="inner">
                 <h1 class="title"><a href="#" class="ir">투썸플레이스</a></h1>
+                <h2>주요메뉴</h2>
                 <ul class="gnb clearfix">
-                    <h2>주요메뉴</h2>
                     <li class="m_menu">
                         <a href="#">BRAND</a>
                         <ul class="sub_menu">
@@ -141,20 +144,20 @@
                         <li class="area_wrap twosome_app">
                             <a href="http://www.hollys.co.kr/">
                                 <div class="tumbnail">
-                                    <img src="imgs/app.png">
+                                    <img src="imgs/app.png" alt="#">
                                 </div>
                                 <div class="desc">
                                     <p class="sub">내 손안의 또 다른 투썸</p>
-                                    <h2 class="desc_title"">Twosome app</h2>
+                                    <h2 class="desc_title">Twosome app</h2>
                                 </div>
                                 <div class="app_store">
                                     <div class="google">
-                                        <a href="https://www.baeminchan.com/">
+                                        <a href="#">
                                             <img src="imgs/down_google.png" alt="구글 플레이스토어 바로가기">
                                         </a>
                                     </div>
                                     <div class="apple">
-                                        <a href="https://www.naver.com/">
+                                        <a href="#">
                                             <img src="imgs/down_app.png" alt="애플 앱 스토어 바로가기">
                                         </a>
                                     </div>
@@ -166,30 +169,159 @@
                 <!-- 메인 배너 영역 끝 -->
                 <!-- 신상품 영역 -->
                 <div class="new_arrival section">
+                    <h2 class="screen_out">신상메뉴</h2>
+                    <p class="screen_out">자동으로 이미지가 바뀌는 영역입니다.</p>
                     <div class="new_wrap">
-                        <div class="tumbnail_bx">
-                            <ul>
-                                li*
-                            </ul>
+                        <div class="slide_depth">
+                            <div class="tumbnail_bx">
+                                <div class="back_visual_img" style="background-image:url(imgs/new_img_01.png);">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                            <div class="text_bx">
+                                <a href="#">
+                                    <div class="slide_title">
+                                        <span>New Arrival</span>
+                                        <strong>STRAWBERRY<br />RARE CHEESE</strong>
+                                    </div>
+                                    <div class="slide_desc">
+                                        <p>
+                                            상큼한 딸기퓨레와 부드러운 크림치즈,<br />
+                                            고소한 크럼블, 라즈베리가 함께 어울려<br />
+                                            봄을 닮은 맛의 떠먹는 케이크 
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="text_bx">
-                            
+                        <div class="slide_depth">
+                            <div class="tumbnail_bx">
+                                <div class="back_visual_img" style="background-image:url(imgs/new_img_02.png);">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                            <div class="text_bx">
+                                <a href="#">
+                                    <div class="slide_title">
+                                        <span>New Arrival</span>
+                                        <strong>Vanilla<br />Creme Choux</strong>
+                                    </div>
+                                    <div class="slide_desc">
+                                        <p>
+                                            부드럽고 크리미한 스위스 머랭이 바삭한 슈 위에<br />하얀 눈처럼 내려 앉아 부드럽고 리치한<br />바닐라 크렘과 어우러진 디저트
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- 신상품 영역 끝 -->
                 <!-- 투썸 매장 배너 영역 -->
-                <div class="store section"></div>
+                <div class="store section">
+                    <div class="store_wrap clearfix">
+                        <div class="franchise store_bx">
+                            <div class="desc">
+                                <div class="title">
+                                    <h2>Franchise</h2>
+                                    <p>가맹점 개설안내</p>
+                                </div>
+                                <div class="btn">
+                                  <a href="#">자세히 보기</a>  
+                                </div>
+                            </div>
+                            <div class="icon_area"></div>
+                        </div>
+                        <div class="search_store store_bx">
+                            <div class="desc">
+                                 <div class="title">
+                                    <h2>Store</h2>
+                                    <p>매장 찾기</p>
+                                </div>
+                                <div class="btn">
+                                  <form>
+                                    <fieldset class="clearfix">
+                                        <legend>검색 창</legend>
+                                        <input type="text" name="search_text" class="store_search" placeholder="가까운 매장을 찾아보세요">
+                                        <button type="button" class="store_search_btn">검색버튼</button>
+                                    </fieldset>
+                                </form>
+                                </div>
+                            </div>
+                            <div class="icon_area"></div>
+                        </div>
+                    </div>
+                </div>
                 <!-- 투썸 매장 배너 영역 끝 -->
             </div>
                 <!-- 베스트아이템 영역 -->
                 <div class="best_item section">
-                    <div class="inner"></div>
+                    <div class="inner">
+                        <h2 class="title">BEST ITEM</h2>
+                        <div class="control">
+                            <ul class="best_ctr clearfix">
+                                <li class="on"><a href="#">drink</a></li>
+                                <li><a href="#">md</a></li>
+                                <li><a href="#">dessert</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab_contents">
+                            <div class="product ct1">
+                                <ul class="clearfix">
+                                    <li class="first">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="second">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product ct2">
+                                <ul class="clearfix">
+                                    <li class="first">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="second">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product ct3">
+                                <ul class="clearfix">
+                                    <li class="first">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="second">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slide_arrow"></div>
+                    </div>
                 </div>
                 <!-- 베스트아이템 영역 끝 -->
             <div class="inner">
                 <!-- 비디오 영역 -->
-                <div class="video section"></div>
+                <div class="video section">
+                    <h2 class="screen_out">홍보영상</h2>
+                    <div class="video_bx">
+                        <div class="desc">
+                            <p class="sub">video</p>
+                            <p class="title">Twsome Brand Film</p>
+                        </div>
+                        <a href="#" class="play_btn">PLAY</a>
+                    </div>
+                </div>
                 <!-- 비디오 영역 끝 -->
             </div>
         </div>
