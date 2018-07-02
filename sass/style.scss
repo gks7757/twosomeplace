@@ -5,6 +5,7 @@
 @import 'position';
 
 
+
 //ir
 
 %ir {
@@ -54,6 +55,30 @@ $border_gray: 1px solid #e5e5e5;
 #footer{
 	@include relative();
 	@include z-index(footer_stuff);
+}
+
+//skip_nav
+
+#skip_navi {
+	position: absolute;
+	color: $white;
+    width: 120px;
+    padding: 7px 0;
+    text-align: center;
+    left: -9999px;
+    background: $brand_color;
+    font-size: 12px;
+
+	&:hover, &:active, &:focus {
+    
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto; 
+    z-index: 31;
+
+  }
+
 }
 
 //header
@@ -496,7 +521,9 @@ $border_gray: 1px solid #e5e5e5;
 	.slide_desc {
 
 		padding-top: 160px;
-		@include font_k_w(14px);
+		p {
+			@include font_k_w(14px);
+		}
 	}
 }
 
@@ -608,7 +635,7 @@ $border_gray: 1px solid #e5e5e5;
 			border: 2px solid #fff;
 			border-radius: 2px;
 			text-align: center;
-			@include font_k_w(14px,bold);
+			@include font_k_w(14px);
 			transition: 0.5s;
 
 			&:hover {
@@ -657,6 +684,7 @@ $border_gray: 1px solid #e5e5e5;
 			border-radius: 2px;
 			background-color: #525252;
 			color: #fff;
+			@include font_k_w(14px);
 
 		}
 

@@ -111,10 +111,6 @@ jQuery(function($){
     });
 
 
-    // // function etc_bx() {
-    //    if(!$('.etc_bx')).hide();
-    // // }
-
 
     //app 버튼
 
@@ -123,15 +119,15 @@ jQuery(function($){
     $app_icon.on({
         mouseover:function(){
 
-                $(this).find(".app_bg").animate({ width:'100%' },150);
-                $(this).find('.app_text').animate({ color:'#fff' },100);
+                $(this).find(".app_bg").animate({ width:'100%' },100);
+                $(this).find('.app_text').animate({ color:'#fff' },110);
             },
             focus:function(){
                 $(this).trigger('mouseover'); 
             }
         }).parent().on('mouseleave',function(){
 
-            $(this).find(".app_bg").animate({ width:'23px' },150);
+            $(this).find(".app_bg").animate({ width:'23px' },100);
             $(this).find('.app_text').animate({ color:'#ae1d31' },100);
      });
 

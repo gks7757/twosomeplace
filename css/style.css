@@ -90,6 +90,22 @@ body, a, p {
   position: relative;
   z-index: 10; }
 
+#skip_navi {
+  position: absolute;
+  color: #fff;
+  width: 120px;
+  padding: 7px 0;
+  text-align: center;
+  left: -9999px;
+  background: #ae1d31;
+  font-size: 12px; }
+  #skip_navi:hover, #skip_navi:active, #skip_navi:focus {
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: 31; }
+
 #header .inner {
   position: relative;
   min-height: 108px;
@@ -371,9 +387,10 @@ body, a, p {
     line-height: 1.1;
     color: #2b2b2b; }
   .new_arrival .text_bx .slide_desc {
-    padding-top: 160px;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 14px; }
+    padding-top: 160px; }
+    .new_arrival .text_bx .slide_desc p {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px; }
 
 .slick-arrow {
   width: 30px;
@@ -448,7 +465,6 @@ body, a, p {
     text-align: center;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
-    font-weight: bold;
     transition: 0.5s; }
     .franchise .btn a:hover {
       background-color: #fff;
@@ -478,7 +494,9 @@ body, a, p {
       border: 2px solid #fff;
       border-radius: 2px;
       background-color: #525252;
-      color: #fff; }
+      color: #fff;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px; }
     .search_store .btn .store_search::placeholder {
       color: #fff; }
     .search_store .btn .store_search_btn {
