@@ -39,8 +39,12 @@ button, select {cursor: pointer;}
 .etc_bx.on {
 	display: block;
 }
-.wrap.main .inner{
+.wrap .inner{
 	width: 1200px;margin: 0 auto;
+}
+
+.wrap.sub #container .inner{
+	width: 1000px;margin: 0 auto;
 }
 body, a, p {
 	

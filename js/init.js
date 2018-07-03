@@ -1,48 +1,9 @@
-// jQuery(function($){
-//     //반복되는 선택자는 변수로 지정해서 가져와야 메모리를 적게먹음
-//     $one_depth_submenu=$('.gnb>li>a'); 
-//     $submenu=$('.gnb>li>ul');
-    
-//     $one_depth_submenu.on({
-//         mouseover:function(){
-//             $submenu.slideUp(200);//next관계일땐 슬라이드업을 먼저해줌.
-//             $(this).next().slideDown(200);
-//         },
-//         focus:function(){
-//             $(this).trigger('mouseover'); 
-//         }
-//     }).parent().on('mouseleave',function(){
-//         //마우스 리브는 자식에게 이벤트를 거는게 아니라 부모에게 걸어야 완전히 벗어나는거나 마찬가지이다. 공원을 벗어날때 공원 안의 놀이기구에서 벗어난다고 공원을 떠난게아님.
-//         $submenu.slideUp(200);
-//     });
-
-
-//     $('.kids>a').on('blur',function(){
-//          $(this).parent().trigger('mouseleave');
-//     });
-    
-//     $('#mainSlide').bxSlider({mode:'fade'});
-//     $('#bannerSlide_1').bxSlider();
-//     $('#bannerSlide_2').bxSlider();
-    
-    // $('.best .tabs a').on('click',function(e){
-    //     e.preventDefault();
-    //     n=$('.best .tabs a').index($(this))
-    //     $('.best .tabs li').eq(n).addClass('on').siblings().removeClass('on');
-    //     $('.best .tab-content').eq(n).addClass('on').siblings().removeClass('on');
-    // });
-
-// });
-
-
-
-
 jQuery(function($){
     
     //gnb
 
-    $one_depth_menu = $('#header .gnb>li>a');
-    $sub_menu = $('.gnb .sub_menu');
+    var $one_depth_menu = $('#header .gnb>li>a');
+    var $sub_menu = $('.gnb .sub_menu');
 
     $one_depth_menu.on({
 
@@ -85,36 +46,73 @@ jQuery(function($){
 
     //search
 
-    // $('.etc_menu .search a').on('click', function(){
-    //         $('.etc_bx').addClass('on').parents('etc').find('etc_bx').removeClass('on');
-    // });
 
+    var $search = $('.etc_menu .search a');
+    var $search_bx = $('.search_bx');
+  
+    $search.on({
 
-    $('.etc_menu .search a').on('click', function(){
-        $('.search_bx').toggle();
+        mouseover:function(){
+             $search_bx.addClass('on');
+            },
+            focus:function(){
+                $(this).trigger('mouseover'); 
+            }
+        }).parent().on('mouseleave',function(){
+             $search_bx.removeClass('on');
+            
+     });
 
-    });
-
+    $search_bx.on({
+         mouseover:function(){
+             $search_bx.addClass('on');
+            },
+            focus:function(){
+                $(this).trigger('mouseover'); 
+            }
+        }).parent().on('mouseleave',function(){
+             $search_bx.removeClass('on');
+    })
 
     $('.search_btn').on('blur',function(){
-        $('.search_bx').hide();
+        $search_bx.removeClass('on');
     });
 
     //membership
-    $('.etc_menu .membership a').on('click', function(){
-         $('.membership_bx').toggle();
+    var $membership = $('.etc_menu .membership .membership_icon');
+    var $membership_bx = $('.membership_bx');
+  
+    $membership.on({
 
-    });
+        mouseover:function(){
+             $membership_bx.addClass('on');
+            },
+            focus:function(){
+                $(this).trigger('mouseover'); 
+            }
+        }).parent().on('mouseleave',function(){
+             $membership_bx.removeClass('on');
+            
+     });
+
+    $membership_bx.on({
+         mouseover:function(){
+             $membership_bx.addClass('on');
+            },
+            focus:function(){
+                $membership_bx.trigger('mouseover'); 
+            }
+        }).parent().on('mouseleave',function(){
+             $membership_bx.removeClass('on');
+    })
 
     $('.join_btn').on('blur',function(){
-        $('.membership_bx').hide();
+        $('.membership_bx').removeClass('on');
     });
-
-
 
     //app 버튼
 
-    $app_icon=$('.app a');
+    var $app_icon=$('.app a');
 
     $app_icon.on({
         mouseover:function(){
@@ -142,7 +140,6 @@ jQuery(function($){
     //main_banner_event
 
     $('.event_cnt_wrap').bxSlider({
-        mode:'horizontal',
         auto: true,
         speed: 700,
         autoControls: true,

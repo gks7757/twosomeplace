@@ -1,0 +1,73 @@
+#footer .ft_top {
+  margin-top: 100px; }
+
+.location {
+  max-width: 1000px;
+  margin: 50px auto 12px; }
+  .location span {
+    font-family: 'dotum',sans-serif;
+    font-size: 12px;
+    padding-right: 8px;
+    background: url(../imgs/sub/location_arrow.png) no-repeat right center; }
+  .location a {
+    display: inline-block;
+    font-family: 'dotum',sans-serif; }
+  .location .now {
+    color: #ae1d31;
+    background: none; }
+
+.sub_visual {
+  width: 1200px;
+  margin: 0 auto; }
+
+.sub_contents h2 {
+  margin-top: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 48px;
+  font-weight: 200; }
+.sub_contents dl dt {
+  padding-top: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  font-weight: 200; }
+.sub_contents dl dd {
+  padding: 30px 0 100px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2;
+  color: #8a8a8a; }
+  .sub_contents dl dd span {
+    color: #ae1d31; }
+.sub_contents .brand_info {
+  border-bottom: 1px solid #ebebeb; }
+.sub_contents .pairing {
+  background: url(../imgs/sub/brand_pairing.png) no-repeat right center;
+  border-bottom: 1px solid #ebebeb; }
+.sub_contents .desc {
+  float: left; }
+  .sub_contents .desc dd {
+    padding-bottom: 30px; }
+  .sub_contents .desc .btn {
+    padding: 0; }
+    .sub_contents .desc .btn a {
+      padding: 4px 0;
+      width: 82px;
+      color: #fff;
+      background-color: #ae1d31;
+      text-align: center; }
+.sub_contents .img {
+  float: right;
+  margin-top: 100px; }
+  .sub_contents .img .img_wrap {
+    float: left; }
+  .sub_contents .img .img_wrap.last {
+    margin-left: 30px; }
+  .sub_contents .img p {
+    margin-top: 24px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center; }
+
+/*# sourceMappingURL=contents.css.map */

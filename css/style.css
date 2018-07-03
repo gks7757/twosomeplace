@@ -53,8 +53,12 @@ button, select {
 .etc_bx.on {
   display: block; }
 
-.wrap.main .inner {
+.wrap .inner {
   width: 1200px;
+  margin: 0 auto; }
+
+.wrap.sub #container .inner {
+  width: 1000px;
   margin: 0 auto; }
 
 body, a, p {
@@ -160,27 +164,29 @@ body, a, p {
   top: 44px;
   right: 0;
   z-index: 30; }
-  .etc_menu > div {
+  .etc_menu .etc {
     float: left; }
   .etc_menu .search {
     position: relative;
     z-index: 30; }
-    .etc_menu .search a {
-      padding-bottom: 50px;
+    .etc_menu .search .search_icon {
+      padding: 0 10px 50px;
       width: 16px;
       height: 16px;
       background-image: url("../imgs/search.png");
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-position: center top; }
   .etc_menu .membership {
     position: relative;
-    z-index: 30;
-    margin: 0 28px; }
-    .etc_menu .membership > a {
-      padding-bottom: 50px;
+    z-index: 30; }
+    .etc_menu .membership .membership_icon {
+      padding: 0 10px 50px;
+      margin: 0 30px 0 10px;
       width: 15px;
       height: 13px;
       background-image: url("../imgs/membership.png");
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-position: center top; }
   .etc_menu .app {
     position: relative;
     margin-top: -6px; }
@@ -237,6 +243,12 @@ body, a, p {
       background-position: 50% 50%;
       background-color: #c6c6c6; }
 
+.search_bx.on {
+  display: block; }
+
+.membership_bx.on {
+  display: block; }
+
 .membership_bx {
   display: none;
   position: absolute;
@@ -257,7 +269,7 @@ body, a, p {
     .membership_bx a:hover {
       background-color: #c6c6c6;
       color: #fff; }
-  .membership_bx .join_wrap {
+  .membership_bx .join_btn {
     margin-top: 6px; }
 
 .menu_bg {
@@ -285,9 +297,8 @@ body, a, p {
       font-family: "Noto Sans KR", sans-serif;
       font-size: 16px; }
 
-.main_banner .tumbnail {
-  overflow: hidden;
-  height: 490px; }
+.main_banner .visual {
+  widht: 100%; }
 .main_banner .desc {
   position: absolute;
   top: 56px;
@@ -547,6 +558,9 @@ body, a, p {
       background-size: 270px; }
     .best_item .product ul li.last {
       margin-right: 0; }
+  .best_item .product a {
+    width: 100%;
+    height: 100%; }
   .best_item .ct1 .first {
     background-image: url("../imgs/product/drink/coffe/2097_big_img.jpg");
     background-repeat: no-repeat; }
@@ -635,14 +649,14 @@ body, a, p {
 
 .ft_notice {
   position: relative; }
-  .ft_notice .notice_title h4 .title_icon {
+  .ft_notice .notice_title h3 .title_icon {
     margin-top: 26px;
     float: left;
     width: 30px;
     height: 30px;
     background-image: url("../imgs/notice.png");
     background-repeat: no-repeat; }
-  .ft_notice .notice_title h4 .title_h2 {
+  .ft_notice .notice_title h3 .title_h2 {
     position: relative;
     float: left;
     margin: 34px 0 0 18px;
@@ -775,10 +789,16 @@ body, a, p {
     color: #fff; }
 
 .info_02 {
+  width: 610px;
   margin-top: 6px; }
   .info_02 li {
-    margin: 0 3px 6px 0;
-    padding-right: 9px; }
+    margin: 0 6px 6px 0;
+    padding-right: 6px;
+    background: url(../imgs/bar.png) no-repeat right center; }
+  .info_02 .last {
+    padding-right: 0;
+    margin-right: 0;
+    background: none; }
 
 .copyright {
   margin-bottom: 30px;

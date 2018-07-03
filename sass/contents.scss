@@ -1,0 +1,110 @@
+@import 'font';
+@import 'color';
+@import 'zindex';
+@import 'position';
+
+#footer .ft_top {margin-top: 100px;}
+
+//현재위치
+.location {
+	max-width: 1000px;
+	margin: 50px auto 12px;
+	span {
+		font-family: 'dotum',sans-serif;
+		font-size:12px;
+		padding-right: 8px;
+		background: url(../imgs/sub/location_arrow.png) no-repeat right center;
+	}
+
+	a {
+		display:inline-block;
+		font-family: 'dotum',sans-serif;
+	}
+	.first {
+
+	}
+	.now {
+		color: $brand_color;
+		background: none;
+	}
+}
+
+
+//brand_info
+
+.sub_visual {
+
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.sub_contents {
+
+	h2 {
+		margin-top: 50px;
+		@include font_k_w(48px,200);
+	}
+
+	dl {
+		dt {
+			padding-top: 100px;
+			@include font_k_w(24px,200);
+		}
+		dd {
+			padding: 30px 0 100px;
+			@include font_k_w(14px,300);
+			line-height: 2;
+			color: #8a8a8a;
+			span {
+				color:$brand_color;
+			}
+		}
+	}
+
+	.brand_info {
+		border-bottom: 1px solid #ebebeb;
+	}
+
+	.pairing {
+		background: url(../imgs/sub/brand_pairing.png) no-repeat right center;
+		border-bottom: 1px solid #ebebeb;
+	}
+
+	.desc {
+		float:left;
+		dd {
+
+			padding-bottom: 30px; 
+		}
+
+		.btn { 
+
+			padding:0;
+			a{
+				padding: 4px 0;
+				width:82px;
+				color:#fff;
+				background-color: $brand_color;
+				text-align: center;
+			}
+		}
+	}
+	.img {
+		float: right;
+		margin-top:100px;
+		
+		.img_wrap {
+			float:left;
+		}
+		.img_wrap.last {
+			margin-left: 30px;
+		}
+		p {
+			margin-top: 24px;
+			@include font_k_w(14px,300);
+			text-align:center;
+		}
+	}
+
+}
+
