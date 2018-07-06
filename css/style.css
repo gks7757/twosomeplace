@@ -20,7 +20,9 @@ table {
   border-spacing: 0; }
 
 a, img {
-  display: block; }
+  display: block;
+  /* width:  100%; */
+  }
 
 a {
   cursor: pointer;
@@ -298,7 +300,7 @@ body, a, p {
       font-size: 16px; }
 
 .main_banner .visual {
-  widht: 100%; }
+  width: 100%; }
 .main_banner .desc {
   position: absolute;
   top: 56px;

@@ -138,14 +138,25 @@ jQuery(function($){
 
 
     //main_banner_event
+    var $mainBanner = $('.event_cnt_wrap')
 
-    $('.event_cnt_wrap').bxSlider({
+    $mainBanner.bxSlider({
         auto: true,
         speed: 700,
         autoControls: true,
         stopAutoOnClick: true,
         pager: true,
         autoControlsCombine: true
+    });
+
+
+    $('.event_cnt_wrap li a').focusin(function () {
+      $('.event_cnt_wrap li').removeClass('focus');
+      $(this).parents('li').addClass('focus');
+          $mainBanner.stopAuto();
+      if($('.main-banner li:first-child').hasClass('focus')){
+          $mainBanner.css('transform', 'translate3d(0, 0px, 0px)');
+       }
     });
 
 

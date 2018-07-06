@@ -30,6 +30,12 @@
 }
 
 
+//sub_common
+h2 {
+	margin-top: 50px;
+	@include font_k_w(48px,200);
+}
+
 //brand_info
 
 .sub_visual {
@@ -39,11 +45,6 @@
 }
 
 .sub_contents {
-
-	h2 {
-		margin-top: 50px;
-		@include font_k_w(48px,200);
-	}
 
 	dl {
 		dt {
@@ -108,3 +109,28 @@
 
 }
 
+//brand_history
+
+.brand_history {
+	
+	p {
+		padding: 50px 0 100px;
+		@include font_k_w(24px,200);
+	}
+}
+
+.sub_history {
+	
+	img {
+		margin: 0 auto;
+	}
+	.history_01,.history_03 {
+		dd {
+			padding-bottom: 0;
+		}
+	}
+
+}
+
+
+//notice

@@ -16,15 +16,16 @@
     color: #ae1d31;
     background: none; }
 
-.sub_visual {
-  width: 1200px;
-  margin: 0 auto; }
-
-.sub_contents h2 {
+h2 {
   margin-top: 50px;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 48px;
   font-weight: 200; }
+
+.sub_visual {
+  width: 1200px;
+  margin: 0 auto; }
+
 .sub_contents dl dt {
   padding-top: 100px;
   font-family: "Noto Sans KR", sans-serif;
@@ -69,5 +70,16 @@
     font-size: 14px;
     font-weight: 300;
     text-align: center; }
+
+.brand_history p {
+  padding: 50px 0 100px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  font-weight: 200; }
+
+.sub_history img {
+  margin: 0 auto; }
+.sub_history .history_01 dd, .sub_history .history_03 dd {
+  padding-bottom: 0; }
 
 /*# sourceMappingURL=contents.css.map */
