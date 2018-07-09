@@ -20,9 +20,7 @@ table {
   border-spacing: 0; }
 
 a, img {
-  display: block;
-  /* width:  100%; */
-  }
+  display: block; }
 
 a {
   cursor: pointer;
@@ -65,7 +63,8 @@ button, select {
 
 body, a, p {
   font-family: "Roboto", sans-serif;
-  color: #2f2f2f; }
+  /* color: #2f2f2f; */
+  }
 
 .ft_notice .list .notic_cnt li .notice_text, .ft_notice .list .notic_cnt li .date {
   overflow: hidden;
@@ -76,7 +75,7 @@ body, a, p {
   display: block;
   text-indent: -9999px; }
 
-.screen_out, #header h2, .search_bx fieldset legend, .search_store .btn legend {
+legend, .screen_out, #header h2, .search_store .btn legend {
   overflow: hidden;
   position: absolute;
   width: 0;

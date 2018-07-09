@@ -1,0 +1,5 @@
+//background img
+@mixin bgi($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+}

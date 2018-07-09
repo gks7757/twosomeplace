@@ -52,3 +52,8 @@ body, a, p {
 	color: #2f2f2f;
 
 }
+
+legend {
+	@extend %screen_out;
+}
+

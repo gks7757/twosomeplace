@@ -3,15 +3,9 @@
 @import 'color';
 @import 'zindex';
 @import 'position';
+@import 'blind';
+@import 'bg';
 
-
-//ir
-
-%ir {
-
-	display: block;
-	text-indent: -9999px;
-}
 
 //border
 $border_gray: 1px solid #e5e5e5;
@@ -20,26 +14,10 @@ $border_gray: 1px solid #e5e5e5;
 	border: 1px solid $border_c;
 }
 
-//screen_out
-
-%screen_out {
-	overflow: hidden;
-    position: absolute;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    text-indent: -9999px;
-}
 
 .screen_out {
 
 	@extend %screen_out
-}
-
-//background img
-@mixin bgi($url) {
-	background-image: url($url);
-	background-repeat: no-repeat;
 }
 
 //layout
@@ -223,10 +201,6 @@ $border_gray: 1px solid #e5e5e5;
 	fieldset {
 
 		padding: 29px 18px;
-
-		legend {
-			@extend %screen_out;
-		}
 
 		.search_text {
 			float: left;
