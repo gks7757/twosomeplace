@@ -645,9 +645,6 @@ $border_gray: 1px solid #e5e5e5;
 	.btn {
 		
 		@include relative();
-		legend {
-			@extend %screen_out;
-		}
 
 		.store_search {
 

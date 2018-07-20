@@ -38,15 +38,61 @@ h2 {
 	@include font_k_w(48px,200);
 }
 
-//brand_info
+.title_bar {
+    margin-top: 100px;
+	text-align: center;
+	@include font_k_w(24px,400);
+}
+.line_bar {
+	display: block;	
+	margin: 24px auto 100px;
+	width: 26px;
+	height: 2px;
+	background-color: black;
+}
 
+
+table {
+
+	font-family: "Noto Sans KR", sans-serif;
+	text-align: center;
+	width: 100%;
+
+	tr {
+
+	border-bottom: 1px solid #f4f4f4;
+	}
+
+	thead th {
+		padding-bottom: 40px;
+		font-size: 16px;
+		color: #8a8a8a;
+		border-bottom: 1px solid #303030;
+	}
+	
+	tbody,tfoot {
+		font-size: 14px;
+		th {
+			font-weight: 400;
+			padding: 32px 0;
+		}
+	}
+	
+	tfoot {
+		tr {background-color: #f7f7f7;}
+	}
+}
+
+//brand_cate
+
+//info
 .sub_visual {
 
 	width: 1200px;
 	margin: 0 auto;
 }
 
-.sub_contents {
+.brand_cate {
 
 	dl {
 		dt {
@@ -147,8 +193,8 @@ h2 {
 			@include font_k_w(16px,200);
 		}
 		h2 {
-			margin-top: 16px;
-			@include font_en_w(48px,bold);
+			margin: 16px 0 100px 0;
+			@include font_k_w(48px,bold);
 			color: $brand_color;
 		}
 	}
@@ -158,7 +204,7 @@ h2 {
 .sub2 {
 
 	fieldset {
-		margin: 70px 0 100px;
+		margin-bottom: 100px;
 		text-align: center;
 	}
 
@@ -189,6 +235,9 @@ h2 {
 .list_page {
 	@include font_k_w(14px,300);
 	
+	table tbody td {
+		text-align: left;
+	}
 	.result_pg {
 		@include font_k_w(14px,300);
 		font-size: 18px;
@@ -234,6 +283,7 @@ h2 {
 	td a {
 		@include font_k_w(14px,300);
 		color: #000;
+
 	}
 }
 
@@ -259,10 +309,185 @@ h2 {
 		font-size: 14px;
 		color: #8a8a8a;
 		border: 1px solid #ddd;
+
 	}
 	
 	.now_pg {
 		font-weight: bold;
+		border-color: $brand_color;
+		color: $brand_color;
 	}
 }
 
+
+//open_info
+
+.open_step_cnt {
+
+	.open_step_wrap{
+		@include bgi('../imgs/sub/fr_bg.png');
+		background-position: 6px 5px;
+		text-align: center;
+	}
+
+	.open_step_bx {
+		display: inline-block;
+		dl {
+			padding-top: 110px;
+			margin: 0 43px 130px 0;	
+			width: 210px;
+			text-align: center;	
+			background-position: center 0;
+		}
+		
+		dt {
+			
+			.step_num{
+				color: $brand_color;
+				@include font_k_w(16px,400);
+			}
+			.tit{
+				@include font_k_w(16px,bold);
+				color: #2f2f2f;
+			}
+
+		}
+		dd {
+			margin-top: 20px;
+			@include font_k_w(12px,200);
+		}
+
+		.open_step_04,.open_step_05 {
+			margin-right: 0;
+		}
+
+		.open_step_01{@include bgi('../imgs/sub/fr_01.png');}
+		.open_step_02{@include bgi('../imgs/sub/fr_02.png');}
+		.open_step_03{@include bgi('../imgs/sub/fr_03.png');}
+		.open_step_04{@include bgi('../imgs/sub/fr_04.png');}
+		.open_step_05{@include bgi('../imgs/sub/fr_05.png');}
+		.open_step_06{@include bgi('../imgs/sub/fr_06.png');}
+		.open_step_07{@include bgi('../imgs/sub/fr_07.png');}
+		.open_step_08{@include bgi('../imgs/sub/fr_08.png');}
+	}
+	
+	.bx_row_01 {
+		
+		dl {float: left;}
+
+	}
+
+	.bx_row_02 {
+		dl {float: right; margin-bottom: 0;}
+	}
+}
+
+.open_condition {
+
+	.t_type {
+		width: 40%;
+	}
+	.t_cnt {
+		width: 60%;
+	}
+
+}
+
+.money {
+
+	.t_type {
+		width: 20%;
+	}
+	.t_money {
+		width: 20%;
+	}
+	.t_cnt {
+		width: 60%;
+	}
+}
+
+.more_info {
+	margin-top: 32px;
+	@include font_k_w(14px);
+	span {
+		color:$brand_color;
+		font-weight: bold;
+	}
+}
+
+
+//event
+
+.event_bx_wrap {
+	padding-top: 60px;
+	border-top: 1px solid #dfdfdf;
+	
+	ul li {
+		margin: 0 101px 78px 0;
+		width: 266px;
+		float: left;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+	
+	.tit {
+		@include font_k_w(18px);
+		margin: 33px 0 16px;
+		line-height: 26px;
+	}
+	.date {
+		@include font_k_w(12px,200);
+	}
+}
+
+
+//FAQ
+
+
+.faq_list {
+
+	border-top: 1px solid #303030;
+
+	li {
+		border-bottom: 1px solid #d2d2d2;
+	}
+
+	strong {
+		margin-right: 50px;
+		@include font_en_w(30px,bold);
+		color: $brand_color;
+	}
+
+	.q {
+		margin: 30px 30px;
+		background: url(../imgs/sub/faq_arrow.png) no-repeat 100% 50%;
+		span {
+			display: inline-block;
+			width: 800px;
+			overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+		}
+	}
+	
+	.q.active {
+		display: block;
+		background: url(../imgs/sub/faq_arrow_close.png) no-repeat 100% 50%;
+	}
+
+	.a {
+		display: none;
+		padding: 30px 30px;
+		background-color: #f6f6f6;
+		strong {
+			float: left;
+			color: #666666;
+		}
+		span {
+			display: block;
+			width: 810px;
+			float: left;
+		}
+
+	}
+
+}

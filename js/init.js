@@ -231,7 +231,21 @@ jQuery(function($){
 
     //sub
     
-    //notice
+    //FAQ
+
+    $('.q').on('click', function (e) {
+        e.preventDefault();
+
+        if($("+.a",this).css("display")=="none"){
+            $(".a").slideUp(500);
+            $("+.a",this).slideDown(500);
+            $(".q").removeClass("active");
+            $(this).addClass("active");
+        }else if($("+.a",this).css("display")=="block"){
+            $("+.a",this).slideUp(500);
+            $(".q").removeClass("active");
+        };
+    });
 
 
 });

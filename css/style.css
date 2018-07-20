@@ -63,8 +63,7 @@ button, select {
 
 body, a, p {
   font-family: "Roboto", sans-serif;
-  /* color: #2f2f2f; */
-  }
+  color: #2f2f2f; }
 
 .ft_notice .list .notic_cnt li .notice_text, .ft_notice .list .notic_cnt li .date {
   overflow: hidden;
@@ -75,7 +74,7 @@ body, a, p {
   display: block;
   text-indent: -9999px; }
 
-legend, .screen_out, #header h2, .search_store .btn legend {
+legend, caption, .screen_out, #header h2 {
   overflow: hidden;
   position: absolute;
   width: 0;
