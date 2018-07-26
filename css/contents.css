@@ -324,6 +324,8 @@ table {
   border-top: 1px solid #303030; }
   .faq_list li {
     border-bottom: 1px solid #d2d2d2; }
+    .faq_list li span {
+      font-family: "Noto Sans KR", sans-serif; }
   .faq_list strong {
     margin-right: 50px;
     font-family: "Roboto", sans-serif;
@@ -351,7 +353,7 @@ table {
       color: #666666; }
     .faq_list .a span {
       display: block;
-      width: 810px;
-      float: left; }
+      float: left;
+      width: 810px; }
 
 /*# sourceMappingURL=contents.css.map */
