@@ -356,4 +356,8 @@ table {
       float: left;
       width: 810px; }
 
+#map {
+  width: 1000px;
+  height: 560px; }
+
 /*# sourceMappingURL=contents.css.map */
