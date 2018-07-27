@@ -130,10 +130,10 @@ table {
     font-weight: bold;
     color: #ae1d31; }
 
-.sub2 fieldset {
+.sub2.notice fieldset {
   margin-bottom: 100px;
   text-align: center; }
-.sub2 select, .sub2 input[type="text"], .sub2 button[type="submit"] {
+.sub2.notice select, .sub2.notice input[type="text"], .sub2.notice button[type="submit"] {
   width: 126px;
   padding: 4px 10px;
   font-family: "Noto Sans KR", sans-serif;
@@ -142,12 +142,12 @@ table {
   background-color: #f0f0f0;
   border: none;
   border-radius: 0px; }
-.sub2 .search_select {
+.sub2.notice .search_select {
   margin: 0 20px; }
-.sub2 input[type="text"] {
+.sub2.notice input[type="text"] {
   width: 306px;
   margin-right: 10px; }
-.sub2 button[type="submit"] {
+.sub2.notice button[type="submit"] {
   width: 60px;
   color: #fff;
   background-color: #151515; }
@@ -357,7 +357,73 @@ table {
       width: 810px; }
 
 #map {
+  position: relative;
   width: 1000px;
-  height: 560px; }
+  min-height: 560px;
+  background-color: #ddd; }
+
+.search_pop {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+
+.store_search_tab {
+  width: 300px;
+  background-color: #fff; }
+  .store_search_tab li {
+    float: left;
+    width: 50%;
+    background-color: #fff; }
+    .store_search_tab li a {
+      height: 34px;
+      text-align: center;
+      line-height: 34px;
+      border: 1px solid #fff; }
+  .store_search_tab li.on {
+    background-color: #ae1d31; }
+    .store_search_tab li.on a {
+      color: #fff;
+      border: 1px solid #ae1d31; }
+
+.store_search_con .store_input_wrap {
+  padding-top: 9px;
+  background-color: #ae1d31;
+  height: 39px; }
+  .store_search_con .store_input_wrap .store_input {
+    margin: 0 20px;
+    height: 29px;
+    background-color: #fff; }
+  .store_search_con .store_input_wrap .sch_txt {
+    width: 80%;
+    height: 29px;
+    padding-left: 10px; }
+  .store_search_con .store_input_wrap #name_submit_btn {
+    width: 29px;
+    height: 29px;
+    float: right;
+    background: url("../imgs/search.png") no-repeat 10px center; }
+
+.result_list {
+  width: 300px;
+  height: 400px;
+  overflow: auto; }
+  .result_list .item {
+    overflow: hidden;
+    border: 1px solid #ddd; }
+  .result_list a {
+    padding: 12px 25px;
+    background-color: #fff; }
+  .result_list .store_thum {
+    float: left;
+    margin-right: 26px; }
+  .result_list dl {
+    float: left; }
+    .result_list dl dt {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px;
+      font-weight: bold; }
+    .result_list dl dd {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 12px; }
 
 /*# sourceMappingURL=contents.css.map */

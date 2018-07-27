@@ -110,12 +110,54 @@
                         <p>투썸플레이스 매장찾기</p>
                         <h2>STORE</h2>
                     </div>
-                    <div id="map">
-                        
+                    <div class="map_wrap">
+                        <div id="map">
+                            <div class="search_pop">
+                                <ul class="store_search_tab clearfix">
+                                    <li class="on">
+                                        <a href="#">매장명</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">주소</a>
+                                    </li>
+                                </ul>
+                                <div class="store_search_con">
+                                  <div class="store_input_wrap">          
+                                        <div class="store_input" id="storename_div" style="display:;">
+                                            <form onsubmit="name_search(); return false;" id="name_form" class="clearfix">
+                                              <input type="text" class="sch_txt" value="송탄" id="storename">
+                                              <button type="submit" id="name_submit_btn"></button> 
+                                            </form>
+                                        </div>
+                                        <div class="store_input" id="keyword_div" style="display:none;">
+                                            <form onsubmit="address_search(); return false;">
+                                                <input type="text" class="sch_txt" value="" id="keyword">
+                                                <button type="submit"></button> 
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result_list">
+                                    <ul id="placesList"style="">
+                                        <li class="item">
+                                            <a href="#c" class="clearfix" onclick="panTo('37.0812770235','127.0556699924','1')">
+                                                <div class="store_thum">
+                                                    <img src="../../imgs/sub/store_thumb.png">
+                                                </div>
+                                                <dl>
+                                                    <dt>투썸송탄렉스빌</dt>
+                                                    <dd>경기 평택시 지산동 781-9</dd>
+                                                </dl>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </div>    
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
         <!-- 컨테이너 끝 -->
         <!-- 푸터시작 -->
         <div id="footer">

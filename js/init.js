@@ -250,10 +250,9 @@ jQuery(function($){
 
     // map
 
-
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
         var options = { //지도를 생성할 때 필요한 기본 옵션
-        center: new daum.maps.LatLng(37.54699, 127.09598), //지도의 중심좌표.
+        center: new daum.maps.LatLng(37.077960, 127.057340), //지도의 중심좌표.
         level: 3 //지도의 레벨(확대, 축소 정도)
     };
 
@@ -265,7 +264,7 @@ jQuery(function($){
           
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
     var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOption),
-        markerPosition = new daum.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
+        markerPosition = new daum.maps.LatLng(37.077960, 127.057340); // 마커가 표시될 위치입니다
 
     // 마커를 생성합니다
     var marker = new daum.maps.Marker({
@@ -274,5 +273,6 @@ jQuery(function($){
     });
 
     marker.setMap(map);
+
 
 });

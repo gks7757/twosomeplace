@@ -201,7 +201,7 @@ table {
 }
 
 //notice
-.sub2 {
+.sub2.notice {
 
 	fieldset {
 		margin-bottom: 100px;
@@ -501,6 +501,99 @@ table {
 
 
 #map {
+	position: relative;
 	width: 1000px;
-	height: 560px;
+	min-height: 560px;
+	background-color: #ddd;
+}
+
+.search_pop {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.store_search_tab {
+	width: 300px;
+	background-color: #fff;
+
+	li {
+		float: left;
+		width: 50%;
+		background-color: #fff;
+
+		a {
+			height: 34px;
+			text-align: center;
+			line-height: 34px;
+			border: 1px solid #fff;
+		}
+	}
+
+	li.on {
+		background-color: $brand_color;
+		
+		a {
+			color: #fff;
+			border: 1px solid $brand_color;
+		}
+	}
+}
+
+.store_search_con {
+	
+
+	.store_input_wrap {
+		
+		padding-top: 9px;
+		background-color: $brand_color;
+		height: 39px;
+		
+
+		.store_input {
+			margin: 0 20px;
+			height: 29px;
+			background-color: #fff;
+		}
+		
+		.sch_txt {
+			width: 80%;
+			height: 29px;
+			padding-left: 10px;
+		}
+		#name_submit_btn {
+			width: 29px;
+			height: 29px;
+			float: right;
+			background: url('../imgs/search.png') no-repeat 10px center;
+		}
+	}
+
+}
+
+.result_list {
+	width: 300px;
+	height: 400px;
+	overflow: auto;
+	
+	.item {
+		overflow: hidden;
+		border: 1px solid #ddd;
+	}
+
+	a {
+		padding: 12px 25px;
+		background-color: #fff;
+	}
+
+	.store_thum {
+		float: left;
+		margin-right: 26px;
+	}
+	dl {
+		float: left;
+
+		dt {@include font_k_w(14px, bold)}
+		dd {@include font_k_w(12px)}
+	}
 }
