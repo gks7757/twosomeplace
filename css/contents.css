@@ -365,7 +365,8 @@ table {
 .search_pop {
   position: absolute;
   top: 20px;
-  left: 20px; }
+  left: 20px;
+  z-index: 10; }
 
 .store_search_tab {
   width: 300px;
