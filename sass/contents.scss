@@ -498,10 +498,98 @@ table {
 
 
 // find map 
+.new_open {
+	position: relative;
+	margin: 0 auto;
+	width: 733px;
+	background-color: $brand_color;
+	color: #fff;
+
+	.new_open_more {
+		float: right;
+		padding: 25px 43px 25px 0;
+		a {@include font_k_w(14px);}
+			i {
+				display: inline-block;
+				width: 7px;
+				height: 8px;
+				@include bgi('../imgs/more.png');
+
+			}
+	}
+
+	strong {
+		float: left;
+		margin: 25px 0 25px 43px;
+		padding-right: 29px;
+		@include font_k_w(16px);
+		font-weight: normal;
+		border-right: 1px solid #fff;
+	}
+
+
+	.new_open_list li a {
+		@include font_k_w(16px);
+	}
+	
+	.bx-wrapper {
+		position: relative;
+		float: left;
+		width: 340px;
+		padding: 25px;
+		.new_open_list li {
+			width: 100%;
+		}
+	}
+
+	a {
+		color: #fff;
+	}
+
+
+	.bx-pager {
+		display: none;
+	}
+
+	.bx-prev {
+
+		@extend %ir;
+		width: 11px;
+		height: 6px;
+		@include bgi('../imgs/n_arrow_up.png');
+		@include absolute ($top: 16px, $right: 0);
+	}
+
+	.bx-next {
+
+		@extend %ir;
+		width: 11px;
+		height: 6px;
+		@include bgi('../imgs/n_arrow_down.png');
+		@include absolute ($top: 50px, $right: 0);
+	}
+	
+	.bx-start {
+		@include absolute ($top: 32px, $right: 2px);
+		width: 7px;
+		height: 8px;
+		@extend %ir;
+		@include bgi('../imgs/n_play.png');
+	}
+	.bx-stop {
+		@include absolute ($top: 32px, $right: 2px);
+		width: 7px;
+		height: 8px;
+		@extend %ir;
+		@include bgi('../imgs/n_pause.png');
+
+	}
+}
 
 
 #map {
 	position: relative;
+	margin-top: 100px;
 	width: 1000px;
 	min-height: 560px;
 	background-color: #ddd;

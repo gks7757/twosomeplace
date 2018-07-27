@@ -248,7 +248,18 @@ jQuery(function($){
     });
 
 
-    // map
+    //map_new_open
+    $('.new_open_list').bxSlider({
+      mode: 'vertical',
+      auto: true,
+      speed: 700,
+      autoControls: true,
+      stopAutoOnClick: true,
+      pager: true,
+      autoControlsCombine: true
+    });
+
+    // map_api
 
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
         var options = { //지도를 생성할 때 필요한 기본 옵션

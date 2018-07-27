@@ -1,3 +1,7 @@
+.new_open .bx-prev, .new_open .bx-next, .new_open .bx-start, .new_open .bx-stop {
+  display: block;
+  text-indent: -9999px; }
+
 #footer .ft_top {
   margin-top: 100px; }
 
@@ -356,8 +360,82 @@ table {
       float: left;
       width: 810px; }
 
+.new_open {
+  position: relative;
+  margin: 0 auto;
+  width: 733px;
+  background-color: #ae1d31;
+  color: #fff; }
+  .new_open .new_open_more {
+    float: right;
+    padding: 25px 43px 25px 0; }
+    .new_open .new_open_more a {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px; }
+    .new_open .new_open_more i {
+      display: inline-block;
+      width: 7px;
+      height: 8px;
+      background-image: url("../imgs/more.png");
+      background-repeat: no-repeat; }
+  .new_open strong {
+    float: left;
+    margin: 25px 0 25px 43px;
+    padding-right: 29px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    border-right: 1px solid #fff; }
+  .new_open .new_open_list li a {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px; }
+  .new_open .bx-wrapper {
+    position: relative;
+    float: left;
+    width: 340px;
+    padding: 25px; }
+    .new_open .bx-wrapper .new_open_list li {
+      width: 100%; }
+  .new_open a {
+    color: #fff; }
+  .new_open .bx-pager {
+    display: none; }
+  .new_open .bx-prev {
+    width: 11px;
+    height: 6px;
+    background-image: url("../imgs/n_arrow_up.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 16px;
+    right: 0; }
+  .new_open .bx-next {
+    width: 11px;
+    height: 6px;
+    background-image: url("../imgs/n_arrow_down.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    right: 0; }
+  .new_open .bx-start {
+    position: absolute;
+    top: 32px;
+    right: 2px;
+    width: 7px;
+    height: 8px;
+    background-image: url("../imgs/n_play.png");
+    background-repeat: no-repeat; }
+  .new_open .bx-stop {
+    position: absolute;
+    top: 32px;
+    right: 2px;
+    width: 7px;
+    height: 8px;
+    background-image: url("../imgs/n_pause.png");
+    background-repeat: no-repeat; }
+
 #map {
   position: relative;
+  margin-top: 100px;
   width: 1000px;
   min-height: 560px;
   background-color: #ddd; }
