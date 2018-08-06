@@ -426,10 +426,9 @@ table {
 		margin: 0 101px 78px 0;
 		width: 266px;
 		float: left;
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
 	}
+
+	.mr0 {margin-right: 0;}
 	
 	.tit {
 		@include font_k_w(18px);
@@ -616,6 +615,7 @@ table {
 			text-align: center;
 			line-height: 34px;
 			border: 1px solid #fff;
+			@include font_k_w(14px);
 		}
 	}
 
@@ -685,4 +685,370 @@ table {
 		dt {@include font_k_w(14px, bold)}
 		dd {@include font_k_w(12px)}
 	}
+}
+
+.sub2.menu {
+	
+	h2 {
+		margin-bottom: 50px;
+	}
+
+}
+
+//menu
+
+.menu_top {
+	text-align: center;
+	position: relative;
+	.lnb{
+		display: inline-block;
+		li{
+			float: left;
+			width: 114px;
+			height: 35px;
+			text-align: center;
+			line-height: 35px;
+			border: 1px solid #e7e7e7;
+			border-left: none;
+			a {
+				@include font_k_w(14px)
+			}
+		}
+		.first{
+			border: 1px solid #e7e7e7;
+		}
+		.first.on {
+			background-color: $brand_color;
+			border-color: $brand_color;
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	.menu_visual{
+		position: absolute;
+	}
+	.coffee_visual{
+		top: 0;
+		right: -185px;
+	}
+}
+.coffee {
+	
+	.title span {
+		font-weight: bold;
+	}
+
+}
+.menu_cnt {
+	margin-top: 100px;
+	padding: 50px 0 100px 0;
+	background-color: #f7f7f7;
+}
+
+.menu #footer .ft_top {margin-top: 0;}
+
+
+//app
+.app_sub {
+	h2 {
+		color: $brand_color;
+	}
+}
+.app_sub .sub_visual {
+	height: 350px;
+	@include bgi('../imgs/sub/app_visual.png');
+}
+.app_info {
+	margin-left: 596px;
+	h2 {
+		padding-top: 60px;
+	}
+
+	p {
+		margin: 30px 0;
+		@include font_k_w(14px,200);
+	}
+
+	.dw_icon {
+		
+		a {float: left;}
+
+		.last {margin-left: 8px;}
+
+	}
+}
+
+.app_video {
+	margin: 100px auto;
+	width: 768px;
+	height: 400px;
+	iframe {width: 100%; height: 100%;}
+}
+
+.use_info {
+	text-align: center;
+	.title{
+		h3 {
+			@include font_k_w(24px);
+		}
+		
+		i {
+			display: block;
+			margin: 22px auto 35px;
+			width: 26px;
+			height: 2px;
+			background-color: black;
+		}
+	}
+	
+	dl {
+		display: inline-block;
+		width: 650px;
+		box-sizing: border-box;
+		padding: 54px 0 54px 220px;
+		background-position: left center;
+		dt {
+			padding-bottom: 32px;
+			text-align: left;
+			@include font_k_w(16px,bold);
+		}
+		dd {
+			text-align: left;
+			@include font_k_w(14px);
+			letter-spacing: -1px;
+		}
+
+		dd.last {
+			margin-top: 15px;
+		}
+	}
+	.app_dw_step01 {
+		@include bgi('../imgs/sub/app_dw_step01.png');
+	}
+	.app_dw_step02 {
+		@include bgi('../imgs/sub/app_dw_step02.png');
+	}
+	.app_dw_step03 {
+		@include bgi('../imgs/sub/app_dw_step03.png');
+	}
+}
+
+.tab_lnb {
+	margin: 100px auto 0;
+	width: 1200px;
+}
+
+.tab_control {
+	
+	li {
+		float: left;
+		width: 220px;
+		height: 70px;
+		text-align: center;
+		line-height: 70px;
+		border: 1px solid #f3f3f3;
+		border-left: 0;
+		a {
+			@include font_k_w(18px,200);
+		}
+	}
+	
+	li.first {
+		border: 1px solid #f3f3f3;
+	}
+
+	li.on {
+		background-color: #f3f3f3;
+	}
+}
+
+.tab_wrap {display: none;}
+.tab_wrap.on {display: block;}
+
+.tab_cnt {
+	position: relative;
+	padding: 100px 0;
+	width: 100%;
+	background-color: #f3f3f3;
+	text-align: center;
+}
+
+.tab_cnt_title {
+	display: inline-block;
+}
+.tab_cnt_title .thumb {float: left;}
+.tab_title {
+	float: left;
+	h2 {margin-top: 40px;}
+	margin-left: 80px;
+	p {
+		margin-top: 30px;
+		@include font_k_w(14px);
+		text-align:left;
+	}
+}
+
+.tab_cnt_arrow {
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	bottom: -24px;
+	transform: translate(-50%, -50%);
+	width: 64px;
+	height: 24px;
+	@include bgi('../imgs/sub/app_arrow.png');
+}
+
+.tab_cnt_info {
+	.title {
+
+		h3 {
+			@include font_k_w(24px,400);
+		}
+
+		i {
+			display: block;
+		    margin: 30px auto 50px;
+		    width: 26px;
+		    height: 2px;
+		    background-color: black;
+		}
+	}
+}
+
+.howto {
+	
+	padding-bottom: 70px;
+	border-bottom: 1px solid #e6e6e6;
+
+	li {
+		float: left;
+		width: 33.3333%;
+		text-align: center;
+		.thumb {
+			
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.text{
+		margin-top: 28px;
+		@include font_k_w(16px,bold);
+		strong {color:$brand_color;}
+	}
+
+}
+
+.app_rewad .howto {
+	padding-bottom: 0;
+	text-align:center;
+	.center {
+		display: inline-block;
+	}
+	border-bottom: 0;
+	.thumb {
+		float: left;
+		margin-right: 100px;
+		img {margin: 0 auto;}
+		p{
+			margin-top: 20px;
+			@include font_k_w(16px,bold);
+		}
+	}
+	.text {
+		float: left;
+		text-align:left;
+		p { 
+			@include font_k_w(16px,400);
+			span {
+				color:$brand_color;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.tab_wrap_02 {
+	.tab_cnt{
+		padding: 100px 0 0;
+		.thumb{
+			margin-bottom: -4px;
+		}
+	}
+	.tab_title{
+		margin-top: 60px;
+		h2{
+			margin-top: 0;
+			text-align: left;
+		}
+		.more_text01 {
+			margin-top: 30px;
+		}
+		.more_text02 {
+			margin-top: 15px;
+		}
+	}
+
+	.tab_cnt_info {
+		margin-top: 100px;
+
+		li{
+			width: 25%;
+			height: 490px;
+			float: left;
+		}
+
+		.thumb img {
+			margin: 30px auto;
+		}
+
+		.title {
+			margin-top: 0;
+			strong{
+				@include font_k_w(24px,400);
+			}
+			p{
+				margin-top: 18px;
+				@include font_k_w(14px,400);
+			}
+		}
+
+		i {
+		    display: block;
+		    margin: 28px auto;
+		    width: 138px;
+		    height: 5px;
+		    @include bgi('../imgs/sub/app_reward_bar.png');
+		}
+
+		.info{ 
+			text-align: center;
+			p {
+				display: inline-block;
+				text-align: left;
+				@include font_k_w(14px,400);
+			}
+		}
+	
+	}
+}
+
+.seed {
+	background-color: #f9f9f9;
+}
+.leaf {
+	background-color: #f3f3f3;
+}
+.cherry {
+	background-color: #ebebeb;
+}
+.cherryplus {
+	background-color: #ffeff1;
+}
+.rw_more_text {
+	padding-top: 30px;
 }
