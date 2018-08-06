@@ -259,6 +259,27 @@ jQuery(function($){
       autoControlsCombine: true
     });
 
+
+    // twosome app
+
+    $('.tab_tit a').on('click',function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $tab_li = $(this).parent();
+        var $tab_li_idx = $(this).parent().index();
+        var $all_tab_li = $('.tab_control li');
+
+        var $cnt = $('.tab_wrap');
+        var $cnt_idx = $('.tab_wrap').index(); 
+
+        $all_tab_li.removeClass('on');
+        $tab_li.addClass('on');
+        $cnt.removeClass('on');
+        $cnt.eq($tab_li_idx).addClass('on')
+
+    });
+
+
     // map_api
 
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -284,49 +305,6 @@ jQuery(function($){
     });
 
     marker.setMap(map);
-
-
-// twosome app
-
-    $('.tab_control li').on('click',function(e) {
-        e.preventDefault();
-        $('.tab_control li').removeClass('on');
-        $(this).addClass('on');
-    });
-
-
-
-// function show_more(){
-//     var page = $("#menu_page").val();
-//     page = page*1;
-//     $.ajax({
-//         type: 'POST',
-//         url: '../inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&page='+page,                      
-//         success: function(result) {
-//             if(result !="none"){ //con_btn이 디스플레이 논이 아닐때
-//                 $("#menu_page").val(page+1);
-//                 $("#menu_ul").append(result);
-//             }else{
-//                 $(".con_btn").hide();
-//             };
-//         }
-//     });         
-// }
-
-// function change_cate(){
-//     var chked_val = "";
-//       $(":checkbox[name='chkList']:checked").each(function(pi,po){
-//         if( po.value=="all" || chked_val =="all"){
-//             chked_val="all";
-//         }else{
-//             chked_val += po.value + ",";
-//         }
-//     });
-    
-//     location.replace("/contents/drink.html?chked_val="+chked_val+"#blockcate"); 
-// }
-
-
 
 
 

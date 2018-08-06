@@ -638,7 +638,7 @@ table {
     font-weight: 200; }
 .tab_control li.first {
   border: 1px solid #f3f3f3; }
-.tab_control li.on {
+.tab_control .tab_tit.on {
   background-color: #f3f3f3; }
 
 .tab_wrap {
