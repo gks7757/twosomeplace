@@ -63,8 +63,7 @@ button, select {
 
 body, a, p {
   font-family: "Roboto", sans-serif;
-  color: #2f2f2f;
-  }
+  color: #2f2f2f; }
 
 .ft_notice .list .notic_cnt li .notice_text, .ft_notice .list .notic_cnt li .date {
   overflow: hidden;
@@ -646,8 +645,7 @@ legend, caption, .screen_out, #header h2 {
   float: left; }
 
 .list, .more {
-  padding: 30px 0px;
-  }
+  padding: 30px 0; }
 
 .ft_notice {
   position: relative; }

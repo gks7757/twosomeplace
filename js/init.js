@@ -279,6 +279,19 @@ jQuery(function($){
 
     });
 
+    //login 
+
+    var $placeholder_label = $('#login_pw, #login_id')
+
+    $placeholder_label.on('focus', function () {
+        $(this).siblings('label').css('display','none');
+    });
+
+    $placeholder_label.on('focusout', function() {
+        if($(this).val()==''){
+            $(this).siblings('label').css('display', 'block');
+        }
+    });
 
     // map_api
 
