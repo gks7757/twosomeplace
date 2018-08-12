@@ -4,13 +4,12 @@
 		"thumb" : "../../imgs/product/drink/coffe/2099_big_img.jpg",
 		"name" : "콜드브루 오트 라떼",
 		"date" : "20180710",
-		"date" : "20180710",
 		"type" : "espresso"
 	},{
 		"number" : "02", 
 		"thumb" : "../../imgs/product/drink/coffe/2098_big_img.jpg",
 		"name" : "스탠다드 핸드메이드 코트",
-		"date" : "20180710",
+		"date" : "20180810",
 		"type" : "espresso"
 	},{
 		"number" : "03", 
@@ -34,7 +33,7 @@
 		"number" : "06", 
 		"thumb" : "../../imgs/product/drink/coffe/2099_big_img.jpg",
 		"name" : "카키정장겨울카라코트",
-		"date" : "20180710",
+		"date" : "20180810",
 		"type" : "blended"
 	},{
 		"number" : "07", 
@@ -58,7 +57,7 @@
 		"number" : "10", 
 		"thumb" : "../../imgs/product/drink/coffe/2099_big_img.jpg",
 		"name" : "루즈핏겨울롱다운패딩",
-		"date" : "20180710",
+		"date" : "20180810",
 		"type" : "espresso"
 	},{
 		"number" : "11", 
@@ -82,7 +81,7 @@
 		"number" : "14", 
 		"thumb" : "../../imgs/product/drink/coffe/2099_big_img.jpg",
 		"name" : "눈송이나그랑숏패딩",
-		"date" : "20180710",
+		"date" : "20180810",
 		"type" : "drink"
 	},{
 		"number" : "15", 
