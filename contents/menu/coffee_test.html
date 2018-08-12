@@ -243,11 +243,11 @@
                     if(idx>=data.length) return false;
                     for (var i = 0; i<6; i++) { //for문을 이용하여 3개씩 생성
 
-                        var item_date = data[idx].date; 
-                        var y = item_date.slice(0,4); //01
+                        var item_date = data[idx].date; //20170101
+                        var y = item_date.slice(0,4); //2017
                         var m = item_date.slice(4,6)-1; //01 month는 0부터 시작하기때문에 1을 빼준다
                         var d = item_date.slice(6); //01
-                        item_date = new Date(y,m,d); //아이템을 등록한 날
+                        item_date = new Date(y,m,d); //아이템을 등록한 날 2017,01,01
 
                         console.log(item_date);
                         var gap = Math.floor((date-item_date)/(1000*60*60*24)); //오늘로부터 등록일의 날짜수 계산.
@@ -255,7 +255,7 @@
                         
                         var prd = O.clone(); //프리셋에 저장해 놓은 리스트를 한번 더 복사해서 변수에 대입.
 
-                        if (gap<=30) prd.find('.item_wrap').addClass('new_icon');
+                        if (gap<=30) prd.addClass('new_icon');
                         prd.find('.item_img').attr('src', data[idx].thumb);
                         prd.find('.item_name').text(data[idx].name);
 
