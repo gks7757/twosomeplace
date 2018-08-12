@@ -239,7 +239,7 @@
                 url : './ajax/data.json' ,  
                 success: function (data) { 
 
-                    if(idx>=data.length) {
+                    if(idx===data.length) {
                         $(".more_btn").hide();
                     }
                     for (var i = 0; i<6; i++) { 
