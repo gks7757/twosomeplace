@@ -230,12 +230,31 @@
     <script type="text/javascript">
 
         function show_more() {
+            var date = new Date;
+            var O = $('ul li').clone(); //li를 복사
+            $('ul li').remove(); //기존 li를 삭제
+            var idx = 0;
 
             $.ajax({ 
                 url : './ajax/data.json' , //호출url. get 방식일경우 url뒤에 파라미터를 붙여서 사용 
-                success: function () { //파일을 성공적으로 받아왔을 때
+                success: function (date) { //파일을 성공적으로 받아왔을 때
 
-                    alert("성공");
+                    if(idx>=data.length) return false;
+                    for (var i = 0; i<3; i++) { //for문을 이용하여 3개씩 생성
+
+                        var prd = O.clone(); //프리셋에 저장해 놓은 리스트를 한번 더 복사해서 변수에 대입.
+
+                        //데이터를 불러와서 복사한 리스트에 대입
+                        prd.find('a').attr('href', data[idx].path);
+                        prd.find('.item_img').attr('src', data[idx].thumb);
+                        prd.find('.name').text(data[idx].name);
+
+                        $('ul').append(prd);
+
+                        idx++; //다음상품을 불러오기위해 불러올 데이터 번호를 증가시킨다.
+
+                    };
+
                 }, 
                 error: function(err) { 
                     console.log('데이터 로드 실패');
@@ -243,7 +262,7 @@
 
             });
         }
-       
+
 
     </script>
 </body>
