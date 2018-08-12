@@ -237,15 +237,14 @@
         function show_more() {
 
             $.ajax({ 
-                url : './ajax/data.json' , //호출url. get 방식일경우 url뒤에 파라미터를 붙여서 사용 
-                success: function (data) { //파일을 성공적으로 받아왔을 때
+                url : './ajax/data.json' ,  
+                success: function (data) { 
 
                     if(idx>=data.length) return false;
                     for (var i = 0; i<3; i++) { //for문을 이용하여 3개씩 생성
 
                         var prd = O.clone(); //프리셋에 저장해 놓은 리스트를 한번 더 복사해서 변수에 대입.
 
-                        //데이터를 불러와서 복사한 리스트에 대입
                         prd.find('.item_img').attr('src', data[idx].thumb);
                         prd.find('.item_name').text(data[idx].name);
 
@@ -262,7 +261,6 @@
 
             });
         }
-
 
     </script>
 </body>
