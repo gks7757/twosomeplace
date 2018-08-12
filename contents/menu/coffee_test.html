@@ -229,7 +229,6 @@
     </div>
     <script type="text/javascript">
 
-        var date = new Date;
         var O = $('.menu_item li').clone(); 
         $('.menu_item li').remove(); 
         var idx = 0;
@@ -243,11 +242,8 @@
                     if(idx>=data.length) return false;
                     for (var i = 0; i<6; i++) { 
 
-                        var item_date = data[idx].date; //20170101
-                        var y = item_date.slice(0,4); //2017
-                        // var m = item_date.slice(4,6)-1; //01 month는 0부터 시작하기때문에 1을 빼준다
-                        // var d = item_date.slice(6); //01
-                        // item_date = new Date(y,m,d); //아이템을 등록한 날 2017,01,01
+                        var item_date = data[idx].date;
+                        var y = item_date.slice(0,4); 
 
                         console.log(y);
                         var gap = 2018-y;
