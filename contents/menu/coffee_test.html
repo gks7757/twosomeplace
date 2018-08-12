@@ -245,7 +245,7 @@
                         var prd = O.clone(); //프리셋에 저장해 놓은 리스트를 한번 더 복사해서 변수에 대입.
 
                         //데이터를 불러와서 복사한 리스트에 대입
-                        prd.find('a').attr('href', data[idx].path);
+                        prd.find('.item_wrap a').attr('href', data[idx].path);
                         prd.find('.item_img').attr('src', data[idx].thumb);
                         prd.find('.name').text(data[idx].name);
 
