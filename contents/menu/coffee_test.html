@@ -126,7 +126,7 @@
                     <div class="inner">
                         <ul class="menu_lnb clearfix">
                            <li class="menu_lnb_all on"><button type="button" data-attr="number">전체보기</button>
-                           <li class="menu_lnb_all"><button type="button">음료</button>
+                           <li class="menu_lnb_all"><button type="button" onclick="type(drink)">음료</button>
                            <li class="menu_lnb_all"><button type="button">에스프레소</button>
                            <li class="menu_lnb_all"><button type="button">블렌디드 프라페</button>
                            <li class="menu_lnb_all"><button type="button">티 베리에이션</button>
@@ -274,28 +274,36 @@
 
         show_more();
 
-        // function type(name) {
+        function type(name) {
 
-        //     idx=0;
+            idx=0;
 
-        //      $.ajax({ 
-        //         url : './ajax/data.json', 
-        //         success: function (name) {
+             $.ajax({ 
+                url : './ajax/data.json', 
+                success: function (name) {
 
-        //             $('ul li').remove();
-        //             var type = name[idx].type;
+                    $('ul li').remove();
+                    var type = name[idx].type;
                     
-        //             if(name === type) {
-        //             }
+                    if(name == type) {
 
-        //         },
-        //     error: function(err) { 
-        //             console.log('데이터 로드 실패');
-        //         } 
+                        prd.find('.item_img').attr('src', data[idx].thumb);
+                        prd.find('.item_name').text(data[idx].name);
+
+                        $('.menu_item').append(prd);
+
+                        idx++; 
+
+                    }
+
+                },
+            error: function(err) { 
+                    console.log('데이터 로드 실패');
+                } 
             
-        //     });
+            });
 
-        // }
+        }
 
     </script>
 </body>
