@@ -231,8 +231,8 @@
 
         function show_more() {
             var date = new Date;
-            var O = $('ul li').clone(); //li를 복사
-            $('ul li').remove(); //기존 li를 삭제
+            var O = $('.menu_item li').clone(); //li를 복사
+            $('.menu_item li').remove(); //기존 li를 삭제
             var idx = 0;
 
             $.ajax({ 
@@ -249,7 +249,7 @@
                         prd.find('.item_img').attr('src', data[idx].thumb);
                         prd.find('.name').text(data[idx].name);
 
-                        $('ul').append(prd);
+                        $('.menu_item').append(prd);
 
                         idx++; //다음상품을 불러오기위해 불러올 데이터 번호를 증가시킨다.
 
