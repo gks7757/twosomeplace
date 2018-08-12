@@ -547,6 +547,128 @@ table {
   padding: 50px 0 100px 0;
   background-color: #f7f7f7; }
 
+.menu_lnb {
+  height: 40px;
+  border-bottom: 1px solid #bbbbbb; }
+  .menu_lnb li {
+    float: left;
+    padding: 0 12px;
+    box-sizing: border-box; }
+    .menu_lnb li button[type=button] {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px;
+      height: 41px;
+      color: #8a8a8a;
+      padding: 0 5px; }
+  .menu_lnb .on button[type=button] {
+    position: relative;
+    color: #ae1d31;
+    font-weight: bold;
+    border-bottom: 1px solid #ae1d31; }
+    .menu_lnb .on button[type=button]:after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 6px;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      bottom: -7px;
+      background: url("../imgs/sub/menu_select.png"); }
+
+.menu_item {
+  margin-top: 50px; }
+
+.item_wrap {
+  position: relative;
+  float: left;
+  width: 312px;
+  margin: 0 32px 24px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center; }
+  .item_wrap:nth-child(3n) {
+    margin-right: 0; }
+  .item_wrap .item_img {
+    width: 217px;
+    padding: 32px 0;
+    margin: 0 auto; }
+  .item_wrap .item_name {
+    margin-bottom: 18px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px; }
+
+.new {
+  display: none; }
+
+.new_icon .new {
+  position: absolute;
+  display: block;
+  top: 30px;
+  right: 80px;
+  width: 48px;
+  height: 48px;
+  background: url("../imgs/sub/menu_new.png");
+  text-indent: -99999px; }
+
+.on .item_info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 19;
+  box-sizing: border-box;
+  padding: 35px 20px 15px 20px; }
+  .on .item_info h3 {
+    padding-bottom: 20px;
+    text-align: left;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid #000; }
+    .on .item_info h3 span {
+      display: block;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 12px;
+      font-weight: 300; }
+  .on .item_info .info_close {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .on .item_info .detail_text {
+    margin-top: 20px;
+    text-align: left;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px; }
+  .on .item_info .detail_value {
+    position: absolute;
+    padding: 15px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #e7e7e7; }
+    .on .item_info .detail_value dl {
+      width: 50%;
+      float: left; }
+      .on .item_info .detail_value dl dt, .on .item_info .detail_value dl dd {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 12px; }
+  .on .item_info:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.9;
+    z-index: -1; }
+
+.detail_value dt, .detail_value dd {
+  display: inline-block; }
+.detail_value .all_add dt, .detail_value .all_add dd {
+  font-weight: bold; }
+
 .menu #footer .ft_top {
   margin-top: 0; }
 

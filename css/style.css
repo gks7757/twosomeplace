@@ -63,7 +63,9 @@ button, select {
 
 body, a, p {
   font-family: "Roboto", sans-serif;
-  color: #2f2f2f; }
+  color: #2f2f2f;
+  /* font-weight: bold; */
+  }
 
 .ft_notice .list .notic_cnt li .notice_text, .ft_notice .list .notic_cnt li .date {
   overflow: hidden;
