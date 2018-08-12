@@ -140,7 +140,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <a onclick="show_more()">더보기</a>
+                        <a class="more_btn" onclick="show_more()">더보기</a>
                     </div>
                 </div>
             </div>
@@ -239,7 +239,10 @@
                 url : './ajax/data.json' ,  
                 success: function (data) { 
 
-                    if(idx>=data.length) return false;
+                    if(idx>=data.length) {
+                        return false;
+                        $(".more_btn").hide();
+                    }
                     for (var i = 0; i<6; i++) { 
 
                         var item_date = data[idx].date;
