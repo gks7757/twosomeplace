@@ -239,9 +239,6 @@
                 url : './ajax/data.json' ,  
                 success: function (data) { 
 
-                    if(idx==data.length) {
-                        $(".more_btn").hide();
-                    }
                     for (var i = 0; i<6; i++) { 
 
                         var item_date = data[idx].date;
@@ -262,6 +259,10 @@
                         idx++; 
 
                     };
+
+                    if(idx==data.length) {
+                        $(".more_btn").hide();
+                    }
 
                 }, 
                 error: function(err) { 
