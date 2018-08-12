@@ -229,11 +229,12 @@
     </div>
     <script type="text/javascript">
 
-        function show_more() {
             var date = new Date;
             var O = $('.menu_item li').clone(); //li를 복사
             $('.menu_item li').remove(); //기존 li를 삭제
             var idx = 0;
+
+        function show_more() {
 
             $.ajax({ 
                 url : './ajax/data.json' , //호출url. get 방식일경우 url뒤에 파라미터를 붙여서 사용 
