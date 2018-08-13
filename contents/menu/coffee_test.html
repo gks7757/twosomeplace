@@ -283,10 +283,10 @@
                 url : './ajax/data.json', 
                 success: function (name) {
 
-                    
+                    alert('yaho');
                     var type = name[idx].type;
                     var prd = O.clone();
-                    
+
                     if(name == type) {
 
                         prd.find('.item_img').attr('src', data[idx].thumb);
