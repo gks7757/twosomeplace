@@ -126,7 +126,7 @@
                     <div class="inner">
                         <ul class="menu_lnb clearfix">
                            <li class="menu_lnb_all on"><button type="button" data-attr="number">전체보기</button>
-                           <li class="menu_lnb_all"><a onclick="type('drink')">음료</a>
+                           <li class="menu_lnb_all"><a onclick="t_p('drink')">음료</a>
                            <li class="menu_lnb_all"><button type="button">에스프레소</button>
                            <li class="menu_lnb_all"><button type="button">블렌디드 프라페</button>
                            <li class="menu_lnb_all"><button type="button">티 베리에이션</button>
@@ -274,10 +274,36 @@
 
         show_more();
 
-        function type(name) {
+        function t_p(name) {
+            $('ul li').remove();
+            idx=0;
 
-            alert(name);
-        
+             $.ajax({ 
+                url : './ajax/data.json', 
+                success: function (name) {
+
+                   
+                    var type = name[idx].type;
+                    var prd = O.clone();
+
+                    if(name == type) {
+
+                        prd.find('.item_img').attr('src', data[idx].thumb);
+                        prd.find('.item_name').text(data[idx].name);
+
+                        $('.menu_item').append(prd);
+
+                        idx++; 
+
+                    }
+
+                },
+            error: function(err) { 
+                    console.log('데이터 로드 실패');
+                } 
+            
+            });
+
 
         }
 
