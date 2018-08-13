@@ -276,34 +276,8 @@
 
         function type(name) {
 
-            $('ul li').remove();
-            idx=0;
-
-             $.ajax({ 
-                url : './ajax/data.json', 
-                success: function (name) {
-
-                    alert('yaho');
-                    var type = name[idx].type;
-                    var prd = O.clone();
-
-                    if(name == type) {
-
-                        prd.find('.item_img').attr('src', data[idx].thumb);
-                        prd.find('.item_name').text(data[idx].name);
-
-                        $('.menu_item').append(prd);
-
-                        idx++; 
-
-                    }
-
-                },
-            error: function(err) { 
-                    console.log('데이터 로드 실패');
-                } 
-            
-            });
+            alert(name);
+        
 
         }
 
