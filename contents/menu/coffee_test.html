@@ -275,7 +275,7 @@
         show_more();
 
         function t_p(name) {
-            $('ul li').remove();
+            $('.menu_item li').remove();
             idx=0;
 
              $.ajax({ 
@@ -283,10 +283,10 @@
                 success: function (name) {
 
                    
-                    var type = name[idx].type;
+                    var tt_p = name[idx].type;
                     var prd = O.clone();
 
-                    if(name == type) {
+                    if(name == tt_p) {
 
                         prd.find('.item_img').attr('src', data[idx].thumb);
                         prd.find('.item_name').text(data[idx].name);
